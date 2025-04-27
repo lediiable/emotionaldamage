@@ -19,8 +19,12 @@ class BuildingManager {
     }
 
     loadExistingBuildings() {
-        // Charger les bâtiments existants depuis les données de jeu
+
+        console.log(gameData.buildings);
+
         if (gameData.buildings && gameData.buildings.length > 0) {
+            console.log("aaaaaaaaaaaaaaaaaa");
+
             gameData.buildings.forEach(buildingData => {
                 this.createBuildingFromData(buildingData);
             });

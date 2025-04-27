@@ -8,7 +8,9 @@ const gameData = {
         stone: 200,
         gems: 10
     },
-    buildings: [],
+    buildings: [
+        {id: 1, type: 'townhall', level: 1, x: 50, y: 50}
+    ],
     units: [],
     map: {
         width: 5,  // Changé de 4 à 5 (nombre de régions en largeur)
@@ -20,35 +22,35 @@ const gameData = {
     // 25 régions au total (grille 5x5)
     regions: [
         // Première ligne
-        { id: 0, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 1, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 2, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 3, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 4, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
+        {id: 0, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 1, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 2, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 3, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 4, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
         // Deuxième ligne
-        { id: 5, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 6, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 7, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 8, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 9, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
+        {id: 5, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 6, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 7, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 8, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 9, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
         // Troisième ligne (milieu)
-        { id: 10, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 11, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 12, cost: 0, currency: 'gold', unlocked: true, purchasable: false }, // Centre, débloqué
-        { id: 13, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 14, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
+        {id: 10, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 11, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 12, cost: 0, currency: 'gold', unlocked: true, purchasable: false}, // Centre, débloqué
+        {id: 13, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 14, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
         // Quatrième ligne
-        { id: 15, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 16, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 17, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 18, cost: 800, currency: 'gold', unlocked: false, purchasable: true },
-        { id: 19, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
+        {id: 15, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 16, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 17, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 18, cost: 800, currency: 'gold', unlocked: false, purchasable: true},
+        {id: 19, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
         // Cinquième ligne
-        { id: 20, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 21, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 22, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 23, cost: 0, currency: 'gold', unlocked: false, purchasable: false },
-        { id: 24, cost: 0, currency: 'gold', unlocked: false, purchasable: false }
+        {id: 20, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 21, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 22, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 23, cost: 0, currency: 'gold', unlocked: false, purchasable: false},
+        {id: 24, cost: 0, currency: 'gold', unlocked: false, purchasable: false}
     ],
     gridPositions: [
         [0, 1, 2, 3, 4],
@@ -58,8 +60,8 @@ const gameData = {
         [20, 21, 22, 23, 24]
     ],
     buildingTypes: {
-        townhall: { name: 'Town Hall', size: 2, sprite: '472_castillo' },
-        house: { name: 'House', size: 1, sprite: '485_barraca' },
-        farm: { name: 'Farm', size: 1, sprite: '467_barraca_arquero' }
+        townhall: {name: 'Town Hall', size: 2, sprite: 'ayuntamiento'},
+        house: {name: 'House', size: 1, sprite: '485_barraca'},
+        farm: {name: 'Farm', size: 1, sprite: '467_barraca_arquero'}
     }
 };
