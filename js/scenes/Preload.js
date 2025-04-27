@@ -84,7 +84,7 @@ class Preload extends Phaser.Scene {
         this.load.image('gem-icon', 'assets/images_new/en/troll_civ.png');
 
         // Charger les bâtiments
-        this.load.image('townhall', 'assets/buildingthumbs/ayuntamiento.jpg');
+        this.load.image('townhall', 'assets/items/ayuntamiento.png');
         this.load.image('house', 'assets/buildingthumbs/casa1.jpg');
         this.load.image('farm', 'assets/buildingthumbs/granja3.jpg');
 
